@@ -31,8 +31,8 @@ end
 
 header = File.new("Model.h", "w")
 header.puts("#import <Foundation/Foundation.h>")
-header.puts("\n@interface Model : NSObject \n")
-header.puts("")
+header.puts("\n@interface Model : NSObject \n ")
+
 
 implementation = File.new("Model.m", "w")
 implementation.puts("#import \"Model.h\"")
