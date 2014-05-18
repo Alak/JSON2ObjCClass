@@ -24,7 +24,7 @@ def parseJson(variable, declarationFile, implementationFile)
 				declarationFile.puts("@property (strong, nonatomic) float #{key};")
 				implementationFile.puts("\t\t_#{key} = [dico[@\"#{key}\"] floatValue];")
 			elsif variable[key].is_a?(FalseClass) || variable[key].is_a?(TrueClass)
-				declarationFile.puts("@property (strong, nonatomic) BOOL #{key};")
+				declarationFile.puts("@property (nonatomic) BOOL #{key};")
 				implementationFile.puts("\t\t_#{key} = [dico[@\"#{key}\"] boolValue];")
 			else
 				puts "UNKNOWN CLASS #{variable} -> #{variable[key]} :: #{variable[key].class.name}"
